@@ -1,0 +1,27 @@
+<h3>View All Employee <a href="/employee" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add New</a></h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Fullname</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.fullname}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.mobile}}</td>
+                <td>{{this.city}}</td>
+                <td>
+                    <a href="/employee/{{this._id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    &nbsp;&nbsp;
+                    <a href="/employee/delete/{{this._id}}" onClick="return confirm('Are you sure to delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

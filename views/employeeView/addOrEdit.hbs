@@ -1,0 +1,28 @@
+{{employee}}
+<h1>Insert Employee</h1>
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value={{employee._id}}>
+    <div class="form-group">
+        <label for="" class="control-label">Fullname</label>
+        <input type="text" class="form-control" name="fullname" value={{employee.fullname}}>
+        <div class="text-danger">{{employee.fullnameError}}</div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Email</label>
+        <input type="text" class="form-control" name="email" value={{employee.email}}>
+        <div class="text-danger">{{employee.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="" class="control-label">Mobile</label>
+            <input type="text" class="form-control" name="mobile" value={{employee.mobile}}>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="" class="control-label">City</label>
+            <input type="text" class="form-control" name="city" value={{employee.city}}>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-database" aria-hidden="true"></i> Submit</button>
+    &nbsp;&nbsp;
+    <a href="/employee/list" class="btn btn-primary"><i class="fa fa-list" aria-hidden="true"></i> View All</a>
+</form>
